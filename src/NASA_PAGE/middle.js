@@ -3,24 +3,13 @@ import "../App.css";
 import "../App";
 import axios from "axios";
 
-function Middle () {
-    const [image, setImage] = useState()
-    useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-        .then(response => {
-           
-            setImage(response.data.url)
-        })
+function Middle (props) {
     
-        .catch(error => {
-            console.log(error)
-        })
-    },[])
     return(
         <div className="middle">
 
         <section>
-            <img src = {image} alt ="See Explanation"></img>
+            <img src = {props.image} alt ="See Explanation"></img>
         </section>
         
         </div>
