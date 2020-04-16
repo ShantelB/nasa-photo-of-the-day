@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import Beginning from "./NASA_PAGE/beginning";
-import Middle from "./NASA_PAGE/middle";
-import End from "./NASA_PAGE/end";
 import axios from "axios";
+import { Alert, Spinner } from 'reactstrap';
+
 
 function App() {
   const [title, setTitle] = useState()
@@ -33,13 +33,12 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      <Beginning title={title} copyright={copyright} date={date}/>
-      <Middle image={image}/>
-      <End explanation={explanation}/>
+      
+      <Alert color="dark"><Spinner type="grow" color="primary" /> <strong>Space: the final frontier. These are the voyages of the starship Enterprise. Its continuing mission: to explore strange new worlds. To seek out new life and new civilizations. To boldly go where no one has gone before!!!!</strong>
+         <span role="img" aria-label='go!'>🚀</span> <Spinner type="grow" color="warning" />
+      </Alert>
+      <Beginning title={title} copyright={copyright} date={date} image={image} explanation={explanation}/>
+
     </div>
   );
 }
