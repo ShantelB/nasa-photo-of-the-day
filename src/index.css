@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(../src/images/stefan-cosma-star-trek.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.explanation {
+  background-color: #B8860B;
+  font-size: 30px;
+}
+
+.title {
+  background-color: #BC8F8F;
+}
+
+.App {
+  font-size: 20px;
+}
+
+.card {
+  box-shadow: 20px 20px brown;
 }

@@ -12,7 +12,7 @@ function Beginning(props) {
       
     <Container>
     <div className="Top">
-      <Card>
+      <Card className="card">
       <CardBody className="title">
 
         
@@ -21,12 +21,12 @@ function Beginning(props) {
         <CardSubtitle><h2>{props.date}</h2></CardSubtitle>
         </CardBody>
 
-        <CardImg top width="100%" src={props.image} alt="See Explanation" />
-        <CardBody className="explanation">
+        <CardImg className="image" top width="100%" src={props.image} alt="See Explanation" />
         
+        <CardBody className="explanation">    
     <CardText><strong>Explanation: </strong>{props.explanation}</CardText>
-
       </CardBody>
+
       </Card>
       
     </div>
